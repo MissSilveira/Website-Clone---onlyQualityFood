@@ -31,25 +31,23 @@ html{
     font-size: 62.5%;
 }
 
+
 .intro{    
     background: url('/img/header-img.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    filter: brightness(80%);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 100vh;
     max-width: 100%;
-    padding: 0 20%;
+    padding: 20% 10%;
     gap: 20px;
 }
 
 .intro h1{
-    font-size: 10em;
+    font-size: 11em;
     font-family: var(--letra-serifa);
 }
 
@@ -87,11 +85,10 @@ html{
 .welcome{
     background-color: var(--white);
     padding: 10% 20%;
-    max-width: 100%;
-    height: 75vh;
+    min-width: 100%;
     display: flex;
+    align-items: center;
 }
-
 
 .welcome .left{
     display: flex;
@@ -109,14 +106,6 @@ html{
     font-weight: 300;
     letter-spacing: 2px;
     color: var(--main-color);
-}
-
-.welcome .left h3::after{
-    content: "____";
-    position: relative;
-    top: 10px; right: 90px;
-    height: 2px;
-    width: 19px;
 }
 
 .welcome .left h2{
@@ -189,10 +178,6 @@ html{
     height: 100%;
 }
 
-.testimo{
-    background: var(--white);
-}
-
 .containerTestimo{
     width: 100%;
     background: var(--white);
@@ -242,20 +227,21 @@ html{
     flex-direction: column;
     align-items:flex-start;
     padding: 20px 10px;
-    gap: 15px;
+    gap: 30px;
 }
 
 .articleTestimo__card .articleTestimo__card__h3{
     font-size: 2.5em;
     font-family: var(--letra-serifa);
     font-weight: 300;
-    height: 60px;
+    height: 40px;
 }
 
 .articleTestimo__card  .articleTestimo__card__p{
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-family: var(--letra-semserifa);
     color: var(--black-light);
+    padding: 30px 0px;
 }
 
 .articleTestimo__card  .articleTestimo__card__p--extra{
@@ -268,7 +254,6 @@ html{
     background: url(/img/Fim.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     filter: brightness(80%);
     display: flex;
     justify-content: center;
@@ -295,6 +280,7 @@ html{
     font-weight: 400;
     font-family: var(--letra-semserifa);
 }
+
 .container-footer .hours h2{
     font-size: 3em;
 }
@@ -321,8 +307,7 @@ html{
     font-family: var(--letra-semserifa);
     font-weight: 100;
     display: flex;
-    justify-content: flex-start;
-    padding: 90px 0;
+    /*padding: 0px 0;*/
     gap: 50px;
 }
 
@@ -331,30 +316,11 @@ html{
     font-weight: 100;
 }
 
-.container-footer .form .form1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
 .container-footer .form p{
     font-size: 1.5em;
 }
 
-.container-footer .form .form1 button{
-    width: 130px;
-    text-transform: uppercase;
-    padding: 10px 15px;
-    letter-spacing: 1px;
-    color: var(--white);
-    background-color: var(--main-color);
-    border: none;
-    cursor: pointer;
-}
-
-.container-footer .form form{
+.container-footer .form form, .container-footer .form .form1{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -375,10 +341,13 @@ html{
     width: 100%;
     height: 30px;
     background-color: var(--black);
+    color: var(--white);
+    padding: 0 10px;
     border: none;
+    font-size: 1.5em;
 }
 
-.container-footer .form form .input-form button{
+.container-footer .form form .input-form button , .container-footer .form .form1 button{
     width: 100%;
     height: 30px;
     margin-top: 5px;
@@ -388,4 +357,430 @@ html{
     background-color: var(--main-color);
     border: none;
     cursor: pointer;
+}
+
+@media only screen and (min-width:768px) and (max-width:1023px){
+    .intro{    
+        max-width: 100%;
+        padding: 20% 5%;
+        gap: 20px;
+    }
+
+    .intro h1{
+        font-size: 6em;
+    }
+    
+    .intro p{
+        font-size: 1.8rem;
+
+    }
+    
+    .welcome{
+        background-color: var(--white);
+        padding: 10% 10%;
+
+    }
+    
+    .welcome .left h2{
+        font-size: 3rem;
+    }
+    
+    .welcome .left p{
+        font-size: 1.5rem;
+    }
+
+    .price{
+        background-color: var(--black-light);
+        padding: 0 10%;
+    }
+    
+    .container__cards{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 20px;
+    }
+    
+    .articleTestimo__card{
+        display: flex;
+        flex-direction: column;
+        align-items:flex-start;
+        padding: 20px 10px;
+        gap: 15px;
+    }
+ 
+    
+.container-footer{
+    background: var(--main-color);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    padding: 50px;
+}
+
+.container-footer .hours, .container-footer .form{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px 20px;
+}
+
+.container-footer .hours h2{
+    font-size: 4em;
+}
+
+.container-footer .hours h3{
+    font-size: 2.5em;
+}
+
+.container-footer .hours p{
+    font-size: 2rem;
+}
+
+.container-footer .hours button{
+    font-size: 1.5em;
+}
+
+.container-footer .form h2{
+    font-size: 4rem;
+}
+
+.container-footer .form .form1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.container-footer .form p{
+    font-size: 2em;
+}
+
+.container-footer .form .form1 button , .container-footer .form form .input-form button{
+    width: 10em;
+    height: 50px;
+    font-size: 2em;
+    letter-spacing: 2px;
+}
+
+}
+
+@media screen and (max-width:767.9px){
+    .intro{    
+        background: url('/img/header-img.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        filter: none;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 15% 10%;
+        gap: 20px;
+    }
+
+    .intro h1{
+        text-align: center;
+        font-size: 6em;
+    }
+    
+    .intro p{
+        font-size: 1.7rem;
+        text-align: center;
+    }
+
+    #btn-last{
+        background-color: var(--main-color);
+        color: black;
+    }
+    
+    .welcome{
+        min-width: 100%;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+        padding: 10% 0;
+    }
+    
+    .welcome .left{
+        gap: 15px;
+        width: 75%;
+    }
+        
+    .welcome .right{
+        width: 100%;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .welcome .right img{
+        height: 100%;
+        width: 75%;
+    }
+
+    .containerTestimo{
+        width: 100%;
+        background: var(--white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5% 5%;
+    }
+    
+    .containerTestimo .btn-menu{
+        margin-bottom: 55px;
+    }
+    
+    
+    .container__cards{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        gap: 20px;
+    }
+    
+    .container-footer{
+        background: var(--main-color);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 60px;
+        padding: 40px 10px;
+    }
+    
+    .container-footer .hours, .container-footer .form{
+        background: var(--black-light);
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 20px;
+    }
+    
+    .container-footer .hours h2{
+        font-size: 3.5em;
+    }
+    
+    .container-footer .hours h3{
+        font-size: 2.5em;
+    }
+    
+    .container-footer .hours p{
+        font-size: 2rem;
+    }
+    
+    .container-footer .hours button{
+        font-size: 2em;
+    }
+    
+    .container-footer .form h2{
+        font-size: 3rem;
+    }
+    
+    .container-footer .form .form1{
+        gap: 15px;
+    }
+    
+    .container-footer .form p{
+        font-size: 2.2em;
+    }
+
+    .container-footer .form .form1 button , .container-footer .form form .input-form button{
+        width: 300px;
+        height: 50px;
+        font-size: 2em;
+        letter-spacing: 2px;
+    }
+}
+
+@media screen and (max-width:460px){
+    .intro{    
+        background: url('/img/header-img.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        min-width: 100%;
+        padding: 20% 5%;
+        
+    }
+    
+    .intro h1{
+        font-size: 2em;
+    }
+    
+    .intro p{
+        font-size: 1rem;
+    }
+    
+    .container-btn button{
+        padding: 5px 10px;
+        font-size: 1em;
+    }
+    
+    #btn-first{
+        border: 3px solid var(--white);
+    }
+    
+    #btn-last{
+        background-color: var(--main-color);
+    }
+
+    .welcome{
+        padding: 5% 10%;
+        min-width: 100%;
+    }
+    
+    .welcome .left{
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .welcome .left h3{
+        font-size: 1rem;
+
+    }
+    
+    .welcome .left h2{
+        font-size: 3rem;
+    }
+    
+    .welcome .left p{
+        font-size: 1.5rem;
+    }
+    
+    .welcome .right{
+        width: 100%;
+        padding: 0 10px;
+    }
+    
+    .welcome .right img{
+        height: 100%;
+        width: 100%;
+    }
+    
+    .price{
+        background-color: var(--black-light);
+        padding: 0 5%;
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .containerTestimo{
+        padding: 10% 5%;
+    }
+    
+    .containerTestimo .btn-menu{
+        margin: 30px 20px;
+        cursor: pointer;
+    }
+    
+    .containerTestimo .testimo-p{
+        font-size: 1em;
+    }
+    
+    .testimo-h2{
+        font-size: 3em;
+    }
+    
+    .container__cards{
+        gap: 10px;
+    }
+    
+    .articleTestimo__card{
+        padding: 10px 5px;
+        gap: 30px;
+    }
+    
+    .articleTestimo__card .articleTestimo__card__h3{
+        font-size: 2.5em;
+    }
+    
+    .articleTestimo__card  .articleTestimo__card__p{
+        font-size: 1.5em;
+        font-family: var(--letra-semserifa);
+        color: var(--black-light);
+        padding: 5px 0;
+    }
+    
+    .articleTestimo__card  .articleTestimo__card__p--extra{
+        font-size: 1.75em;
+        font-weight: 600;
+        font-family: var(--letra-serifa);
+    }
+
+    .container-footer{
+        gap: 50px;
+        padding: 5%;
+        align-items: center;       
+        justify-content: center;
+        min-width: 100%;
+        background-color: var(--main-color);
+    }
+    
+    .container-footer .hours, .container-footer .form{
+        color: var(--white);
+        background: var(--black-light);
+        padding: 0 5%;
+        width: 90%;
+    }
+    
+    .container-footer .hours h2{
+        font-size: 3em;
+    }
+    
+    .container-footer .hours h3{
+        font-size: 2em;
+    }
+    
+    .container-footer .hours p{
+        font-size: 1.5rem;
+    }
+    
+    .container-footer .hours button{
+        font-size: 1.5em;
+    }
+        
+    .container-footer .form h2{
+        font-size: 2rem;
+        font-weight: 100;
+    }
+    
+    .container-footer .form p{
+        font-size: 1.5em;
+    }
+    
+    .container-footer .form form, .container-footer .form .form1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .container-footer .form form .input-form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 100%;
+    }
+    
+    .container-footer .form form .input-form button , .container-footer .form .form1 button{
+        width: 100%;
+        height: 30px;
+        font-size: 1.5em;
+    }
+    
 }
